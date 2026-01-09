@@ -4,13 +4,16 @@
     // components are logical building blocks of codes
 
 // 1) Class Based Component (CBC)
-// render is mandatory
-// this keyword => points to curr class => gives properties of curr class
-// {Component} => it itself a component
+    // render is mandatory
+    // this keyword => points to curr class => gives properties of curr class
+    // {Component} => it itself a component
 
 import React, {Component} from "react"
-// To make use of "react" library we use one variable => React
-    // The name can be anything 
+    // To make use of "react" library we have to take one variable nd then,
+    // we need to use it. Since, i can take any variable name then "i can use default export"
+    // cz for "default export" we can take variable name as anything right?
+    // now for "default export" we should not use "{}" right?
+    // So, thats why we are not using "{}" here
 
 /*
     class App extends Component {
@@ -23,10 +26,12 @@ import React, {Component} from "react"
 */
 
 // 2) Functional Based Component (CBC)
-// render is not used here, we directly return
-// import React from "react"
+    // render is not used here, we directly return
+    // Since, we are not using class here we cant use "this" keyword
+    // So, to get to know what is present inside App we can use => console.dir(App)
 
 const App = () => {
+    console.dir(App)
     return <h1>FBC</h1>
 }
 export default App
