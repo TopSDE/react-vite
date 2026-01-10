@@ -1,6 +1,14 @@
+// "main.jsx" acts as javascript file
+// ".jsx" => javascript XML => BETTER VERSION OF NORMAL JS
+// entry file => under "src" folder "main.jsx" executes first
+// import 2 Main Library of React => 1)react 2)react-dom
+// Syntax: import variable from "library"
+
+
 import React from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App"
+import "./global.css"
 
     // "/client" => It states that we r working on client side/front-end 
         // and not on server side/backend
