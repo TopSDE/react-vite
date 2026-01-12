@@ -81,34 +81,73 @@
 // -------------------------------------------------------
 
 /*
-// **IMP
-// INLINE CSS
-import { Fragment } from "react"
-const App = () => {
-    // { {} = Object } => Expression
-    let btn = {
-        height: "50px",
-        width: "200px",
-        borderRadius: "10px",
-        background: "yellow"
-    }
+    // **IMP
+    // INLINE CSS
+    import { Fragment } from "react"
+    const App = () => {
+        // { {} = Object } => Expression
+        let btn = {
+            height: "50px",
+            width: "200px",
+            borderRadius: "10px",
+            background: "yellow"
+        }
 
-    return (
-        <>
-        <p style={{color:"red", textAlign:"center"}}>INLINE CSS</p>
-        <button style={btn}>Color Me</button>
-        </>
-    )
-}
-export default App
+        return (
+            <>
+            <p style={{color:"red", textAlign:"center"}}>INLINE CSS</p>
+            <button style={btn}>Color Me</button>
+            </>
+        )
+    }
+    export default App
 */
 
+/*
+    // **IMP
+    // GLOBAL CSS
+    const App = () => {
+        return (
+            <>
+            <h1 id="head">GLOBAL CSS</h1>
+            <div className="circle"></div>
+            </>
+        )
+    }
+    export default App
+*/
+
+/*
+    // **IMP
+    // MODULE CSS
+
+    import React from "react";
+    import Header from "./modulecss/Header"
+
+    const App = () => {
+        return (
+            <>
+                <Header/>
+            </>
+        )
+    }
+    export default App
+*/
+
+// -------------------------------------------------------
+// /*
+
+import React from 'react'
+import ConditionalRendering from './ConditionalRendering'
+
 const App = () => {
-    return (
-        <>
-        <h1 id="head">GLOBAL CSS</h1>
-        <div className="circle"></div>
-        </>
-    )
+  return (
+    <>
+        <ConditionalRendering />
+    </>
+  )
 }
+
 export default App
+
+// */

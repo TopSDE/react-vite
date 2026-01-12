@@ -1,0 +1,14 @@
+#navBlock {
+    height: 70px;
+    background-color: blue;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+.list {
+    height: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
