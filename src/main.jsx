@@ -1,5 +1,9 @@
 // "main.jsx" acts as javascript file
-// ".jsx" => javascript XML => BETTER VERSION OF NORMAL JS
+// ".jsx" => JS+XML => JavaScript XML => (extended/improved version of js)
+// so we can write "HTML like Code" in the JS itself
+// code is easier, syntax is simple, "faster" than normal JS
+
+
 // entry file => under "src" folder "main.jsx" executes first
 // import 2 Main Library of React => 1)react 2)react-dom
 // Syntax: import variable from "library"

@@ -135,19 +135,163 @@
 */
 
 // -------------------------------------------------------
-// /*
+/*
 
 import React from 'react'
 import ConditionalRendering from './ConditionalRendering'
 
+//import { fragment } from "react"
+    // <fragment>   ❌ treated like HTML tag
+    // <Fragment>   ✅ treated as React component
+    // React treats lowercase tags as HTML elements, and uppercase as React components.
+    // React exports it like this internally:
+        // export const Fragment = ...
+
 const App = () => {
   return (
-    <>
+    <fragment>
         <ConditionalRendering />
-    </>
+    </fragment>
   )
 }
 
 export default App
+
+*/
+
+// -------------------------------------------------------
+// **IMP
+// PROPS
+
+/*
+    import React from 'react'
+    import Child from './Child'
+    
+    const App = () => {
+      return (
+        <>
+            <Child 
+                student="Punith"
+                sid={100}
+                bool={true}
+            />
+        </>
+      )
+    }
+    export default App
+*/
+
+// ---------------------------------
+
+// **IMP
+// PROPS DESTRUCTURING - AFTER RECEIVING
+/*
+    import React from 'react'
+    import Child from './Child'
+    
+    const App = () => {
+      return (
+        <>
+            <Child 
+                employee="Punith"
+                sal={10000000}
+                bool={true}
+            />
+        </>
+      )
+    }
+    export default App
+*/
+
+// ---------------------------------
+
+// **IMP
+// PROPS DESTRUCTURING - WHILE RECEIVING
+/*
+    import React from 'react'
+    import Child from './Child'
+    
+    const App = () => {
+      return (
+        <>
+            <Child 
+                employee="Punith"
+                sal={10000000}
+                bool={true}
+            />
+        </>
+      )
+    }
+    export default App
+*/
+
+// ---------------------------------
+
+// **IMP
+// PROPS DESTRUCTURING - SENDING ARRAY AS "PROP VAL"
+/*
+    import React from 'react'
+    import Child from './Child'
+    
+    const App = () => {
+
+        let technology = ["Java", "Python", "Testing"]
+
+        return (
+            <>
+                <Child 
+                    institute={["QSpiders", "JSpiders", "PySpiders"]}
+                    tech={technology}
+                />
+            </>
+        )
+    }
+    export default App
+
+*/
+
+// ---------------------------------
+
+// **IMP
+// PROPS DESTRUCTURING - SENDING OBJ AS "PROP VAL"
+/*
+
+    import React from 'react'
+    import Child from './Child'
+    
+    const App = () => {
+
+        let place = {state: "Karnataka", city: "Udupi"}
+
+        return (
+            <>
+                <Child 
+                    institute={{pname: "Punith", age:21}}
+                    address={place}
+                />
+            </>
+        )
+    }
+    export default App
+
+*/
+
+// ---------------------------------
+
+// **IMP
+// PROPS DESTRUCTURING - SENDING "MULTIPLE VAL" AS "PROP VAL"
+// /*
+
+    import React from 'react'
+    import Parent from './Parent'
+    
+    const App = () => {
+      return (
+        <>
+            <Parent/>
+        </>
+      )
+    }
+    export default App
 
 // */
