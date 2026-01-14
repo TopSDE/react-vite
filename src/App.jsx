@@ -280,7 +280,7 @@ export default App
 
 // **IMP
 // PROPS DESTRUCTURING - SENDING "MULTIPLE VAL" AS "PROP VAL"
-// /*
+/*
 
     import React from 'react'
     import Parent from './Parent'
@@ -294,4 +294,38 @@ export default App
     }
     export default App
 
-// */
+*/
+
+// ---------------------------------
+// **IMP
+// PROPS CHILDREN
+/*
+    import React from 'react'
+    import Parent from './Parent'
+    
+    const App = () => {
+      return (
+        <>
+            <Parent/>
+        </>
+      )
+    }
+    export default App
+*/
+
+// -------------------------------------------------------
+// **IMP
+// TASK
+
+    import React from 'react'
+    import ProfileInfo from "./task/ProfileInfo"
+
+    const App = () => {
+
+        return (
+            <>
+                <ProfileInfo/>
+            </>     
+        )
+    }
+    export default App

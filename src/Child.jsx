@@ -109,7 +109,7 @@ export default Child
 
 // **IMP
 // PROPS DESTRUCTURING - SENDING "MULTIPLE VAL" AS "PROP VAL"
-// /*
+/*
 
     import React from 'react'
 
@@ -127,7 +127,112 @@ export default Child
     }
 
 export default Child
+*/
 
+// ---------------------------------
+// **IMP
+// PROPS CHILDREN
+/*
 
+    import React from 'react'
+    
+    const Child = (props) => {
+        console.log(props);
+        
+      return (
+        <>
+            {props.children}
+        </>
+      )
+    }
+    export default Child
+
+*/
+
+// ---------------------------------
+// **IMP
+// PROPS CHILDREN => AFTER RECEIVING
+/*
+
+    import React from 'react'
+    
+    const Child = (props) => {
+        console.log(props);
+        let {children} = props
+        
+      return (
+        <>
+            {children}
+        </>
+      )
+    }
+    export default Child
+
+*/
+
+// ---------------------------------
+// **IMP
+// PROPS CHILDREN => WHILE RECEIVING
+/*
+
+    import React from 'react'
+    
+    const Child = ({children}) => {
+        
+      return (
+        <>
+            {children}
+        </>
+      )
+    }
+    export default Child
+
+*/
+
+// -------------------------------------------------------
+// **IMP
+// DEFAULT PROPS => 1ST WAY
+/*
+
+    import React from 'react'
+
+    const Child = (props) => {
+        console.log(props);
+
+        let {item="Car", cost=50000, rating=2} = props
+        
+        return (
+            <>
+                <h1>Item = {item}</h1>
+                <h1>Cost = {cost}</h1>
+                <h1>Rating = {rating}</h1>
+            </>
+        )
+    }
+    export default Child
+
+*/
+
+// -------------------------------------------------------
+// **IMP
+// DEFAULT PROPS => 2ND WAY
+// /*
+
+    import React from 'react'
+
+    const Child = (props) => {
+        console.log(props);
+
+        let {item, cost, rating} = props
+        
+        return (
+            <>
+                <h1>Item = {item || "Car"}</h1>
+                <h1>Cost = {cost || 50000}</h1>
+                <h1>Rating = {rating || 2}</h1>
+            </>
+        )
+    }
+    export default Child
 
 // */
