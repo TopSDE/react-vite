@@ -81,7 +81,7 @@
 // ---------------------------------
 // **IMP
 // DEFAULT PROPS => 2ND WAY
-// /*
+/*
 
     import React from 'react'
     import Child from './Child'
@@ -96,6 +96,28 @@
             </>
         )
 
+    }
+    export default Parent
+*/
+
+// -------------------------------------------------------
+// **IMP
+// PROPS ARE IMMUTABLE
+// /*
+
+    import React, { Children } from 'react'
+    import Child from './Child'
+    
+    const Parent = () => {
+        let developer = "Punith"
+
+        return (
+            <>
+                <Child
+                dev={developer}
+                />
+            </>
+        )
     }
     export default Parent
 

@@ -316,6 +316,7 @@ export default App
 // -------------------------------------------------------
 // **IMP
 // TASK
+/*
 
     import React from 'react'
     import ProfileInfo from "./task/ProfileInfo"
@@ -329,3 +330,67 @@ export default App
         )
     }
     export default App
+*/
+
+// -------------------------------------------------------
+// **IMP
+// PROPS ARE IMMUTABLE
+/*
+
+    import React from 'react'
+    import Parent from './Parent'
+
+    const App = () => {
+
+        return (
+            <>
+                <Parent/>
+            </>
+        )
+    }
+
+    export default App
+
+*/
+
+// -------------------------------------------------------
+// **IMP
+// TOP/SENDER ---> MEDIATOR ---> BOTTOM/RECEIVER
+/*
+
+    import React from 'react'
+    import Product from './Product'
+    
+    const App = () => {
+
+        return (
+            <>
+                <Product/>
+            </>
+        )
+    }
+    export default App
+*/
+
+// -------------------------------------------------------
+// **IMP
+// HOOKS
+    // FUNCTIONS -> FBC -> 16.8
+    // 3 BASIC => useState() , useEffect(), useContext()
+    // 
+// /*
+
+import React from 'react'
+import StateComponent from './StateComponent'
+
+const App = () => {
+
+    return (
+        <>
+            <StateComponent/>
+        </>
+    )
+}
+export default App
+
+// */

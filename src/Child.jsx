@@ -216,7 +216,7 @@ export default Child
 // -------------------------------------------------------
 // **IMP
 // DEFAULT PROPS => 2ND WAY
-// /*
+/*
 
     import React from 'react'
 
@@ -231,6 +231,27 @@ export default Child
                 <h1>Cost = {cost || 50000}</h1>
                 <h1>Rating = {rating || 2}</h1>
             </>
+        )
+    }
+    export default Child
+
+*/
+
+// -------------------------------------------------------
+// **IMP
+// PROPS ARE IMMUTABLE
+// /*
+
+    import React from 'react'
+    
+    const Child = (props) => {
+        console.log(props);
+        props.dev = "XYZ"
+
+        return (
+            <h1>
+                {props.dev}
+            </h1>
         )
     }
     export default Child
