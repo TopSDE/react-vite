@@ -372,13 +372,13 @@ export default App
     export default App
 */
 
-// -------------------------------------------------------
+// ---------------------------------------------------------------------------
 // **IMP
 // HOOKS
     // FUNCTIONS -> FBC -> 16.8
     // 3 BASIC => useState() , useEffect(), useContext()
     // 
-// /*
+/*
 
 import React from 'react'
 import StateComponent from './StateComponent'
@@ -388,6 +388,47 @@ const App = () => {
     return (
         <>
             <StateComponent/>
+        </>
+    )
+}
+export default App
+
+*/
+
+// ---------------------------------
+// **IMP
+// HOOKS => COUNTER
+/*
+
+import React from 'react'
+import SimpleCounter from './task/SimpleCounter'
+
+const App = () => {
+
+    return (
+        <>
+            <SimpleCounter/>
+        </>
+    )
+}
+export default App
+
+// */
+
+// ---------------------------------
+// **IMP
+// HOOKS => TOGGLE
+//*
+
+import React from 'react'
+import SimpleCounter from './task/SimpleCounter'
+import ToggleContent from './task/ToggleContent'
+
+const App = () => {
+
+    return (
+        <>
+            <ToggleContent/>
         </>
     )
 }
