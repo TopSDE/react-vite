@@ -25,7 +25,7 @@ export default Product
 
 import React from 'react'
 import WhisherList from './WhisherList'
-
+/*
 const Product = () => {
     let item = "pen"
     let company = "Parker"
@@ -43,5 +43,11 @@ const Product = () => {
     )
 }
 export default Product
+*/
 
-// */
+// ------------------------------------------------------------------
+
+// ONE PROGRAM NOT WRITTEN -- PRESENT IN QTALK
+
+// ------------------------------------------------------------------
+

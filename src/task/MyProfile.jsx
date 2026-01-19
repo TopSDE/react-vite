@@ -1,30 +1,54 @@
-import React from 'react'
+// import React from 'react'
 
-const MyProfile = (props) => {
-    console.log(props);
+// const MyProfile = (props) => {
+//     console.log(props);
     
-    let {info: {firstName, middleName, lastName, nation, age, photo, match="India", run}, children} = props
+//     let {info: {firstName, middleName, lastName, nation, age, photo, match="India", run}, children} = props
+
+//     return (
+//         <>
+//             <section>
+//                 <h1>
+//                     Profile of {firstName} {middleName} {lastName}
+//                 </h1>
+//                 <img src={photo} alt='' height="300px" width="500px"></img>
+//                 <h2>
+//                     Nation is = {nation}
+//                 </h2>
+//                 <h2>
+//                     Age is = {age}
+//                 </h2>
+//                 <h2>
+//                     Match : {match}, Runs : {run || 100}
+//                 </h2>
+                
+//                 {children}
+
+//             </section>
+//         </>
+//     )
+// }
+
+// export default MyProfile
+
+
+
+import React, { useContext } from 'react'
+import { ProfileApi } from '../context/ProfileContext'
+
+const MyProfile = () => {
+
+    let data = useContext(ProfileApi)
+    console.log(data);
+    const {employee, salary, company, salIncrement, shiftCompany} = data
 
     return (
         <>
-            <section>
-                <h1>
-                    Profile of {firstName} {middleName} {lastName}
-                </h1>
-                <img src={photo} alt='' height="300px" width="500px"></img>
-                <h2>
-                    Nation is = {nation}
-                </h2>
-                <h2>
-                    Age is = {age}
-                </h2>
-                <h2>
-                    Match : {match}, Runs : {run || 100}
-                </h2>
-                
-                {children}
-
-            </section>
+            <h1>
+                {employee} is earning Rs.{salary} from {company}
+            </h1>
+            <button onClick={shiftCompany}>SHIFT COMPANY</button>
+            <button onClick={salIncrement}>INCREMENT</button>
         </>
     )
 }

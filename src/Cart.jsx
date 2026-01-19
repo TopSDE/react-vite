@@ -21,7 +21,7 @@ export default Cart
 // -------------------------------------------------------
 // **IMP
 // TOP/SENDER ---> MEDIATOR ---> BOTTOM/RECEIVER
-// /*
+/*
 
 import React from 'react'
 
@@ -41,5 +41,26 @@ const Cart = (props) => {
     )
 }
 export default Cart
+*/
 
-// */
+// ------------------------------------------------------------------
+// **IMP
+// CONTEXT API
+/*
+
+import React, { useContext } from 'react'
+import { ProductApi } from './context/ProductContext'
+
+const Cart = () => {
+    let data = useContext(ProductApi)
+    console.log(data);
+    
+    return (
+        <>
+            <h1>Cart = {data}</h1>
+        </>
+    )
+}
+export default Cart
+
+*/

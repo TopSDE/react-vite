@@ -418,7 +418,7 @@ export default App
 // ---------------------------------
 // **IMP
 // HOOKS => TOGGLE
-//*
+/*
 
 import React from 'react'
 import SimpleCounter from './task/SimpleCounter'
@@ -429,6 +429,49 @@ const App = () => {
     return (
         <>
             <ToggleContent/>
+        </>
+    )
+}
+export default App
+
+*/
+
+// ------------------------------------------------------------------
+
+// ONE PROGRAM NOT WRITTEN -- PRESENT IN QTALK
+
+// ------------------------------------------------------------------
+
+// **IMP
+// CONTEXT API
+/*
+
+import React from 'react'
+import ProductContext from './context/ProductContext'
+
+const App = () => {
+    return (
+        <>
+            <ProductContext/> 
+        </>
+    )
+}
+export default App
+
+*/
+
+// ---------------------------------
+// **IMP
+// CONTEXT API
+// /*
+
+import React from 'react'
+import ProfileContext from './context/ProfileContext'
+
+const App = () => {
+    return (
+        <>
+            <ProfileContext/> 
         </>
     )
 }
