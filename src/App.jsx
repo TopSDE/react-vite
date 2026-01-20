@@ -106,6 +106,8 @@
 /*
     // **IMP
     // GLOBAL CSS
+    import "./global.css"
+
     const App = () => {
         return (
             <>
@@ -120,6 +122,10 @@
 /*
     // **IMP
     // MODULE CSS
+    
+    // .module.css part as a signal:
+    // “This CSS file should be treated as a CSS Module (scoped locally), 
+    // not as global CSS.”
 
     import React from "react";
     import Header from "./modulecss/Header"
@@ -350,7 +356,6 @@ export default App
     }
 
     export default App
-
 */
 
 // -------------------------------------------------------
@@ -372,6 +377,9 @@ export default App
     export default App
 */
 
+
+
+
 // ---------------------------------------------------------------------------
 // **IMP
 // HOOKS
@@ -392,7 +400,6 @@ const App = () => {
     )
 }
 export default App
-
 */
 
 // ---------------------------------
@@ -412,7 +419,6 @@ const App = () => {
     )
 }
 export default App
-
 // */
 
 // ---------------------------------
@@ -433,7 +439,6 @@ const App = () => {
     )
 }
 export default App
-
 */
 
 // ------------------------------------------------------------------
@@ -441,6 +446,9 @@ export default App
 // ONE PROGRAM NOT WRITTEN -- PRESENT IN QTALK
 
 // ------------------------------------------------------------------
+
+
+
 
 // **IMP
 // CONTEXT API
@@ -457,13 +465,12 @@ const App = () => {
     )
 }
 export default App
-
 */
 
 // ---------------------------------
 // **IMP
 // CONTEXT API
-// /*
+/*
 
 import React from 'react'
 import ProfileContext from './context/ProfileContext'
@@ -476,5 +483,31 @@ const App = () => {
     )
 }
 export default App
+*/
+
+
+
+
+// ------------------------------------------------------------------
+// **IMP
+// **HOC
+// A return statement in an HOC returns to the place where the HOC is called.
+// If the HOC is never called, the return is never used and nothing renders.
+// /*
+
+import React from 'react'
+import CompA from './hoc/CompA'
+import CompB from './hoc/CompB'
+
+const App = () => {
+    return (
+        <>
+            <CompA/>
+            <CompB/>
+        </>
+    )
+}
+export default App
+
 
 // */
