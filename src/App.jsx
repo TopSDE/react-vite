@@ -493,7 +493,7 @@ export default App
 // **HOC
 // A return statement in an HOC returns to the place where the HOC is called.
 // If the HOC is never called, the return is never used and nothing renders.
-// /*
+/*
 
 import React from 'react'
 import CompA from './hoc/CompA'
@@ -508,6 +508,60 @@ const App = () => {
     )
 }
 export default App
+*/
 
+// ------------------------------------------------------------------
+// **IMP
+// **REFERENCE
+/*
+
+import React from 'react'
+import Reference from './Reference'
+
+const App = () => {
+
+    return (
+        <>
+            <Reference/>
+        </>
+    )
+}
+export default App
+*/
+
+// ---------------------------------
+// **IMP
+// VIDEO REFERENCE
+/*
+
+import React from 'react'
+import VideoReference from './VideoReference'
+
+const App = () => {
+    return (
+        <>
+            <VideoReference/>
+        </>
+    )
+}
+export default App
+*/
+
+// ------------------------------------------------------------------
+// **IMP
+// **UNCONTROLLED FORM
+// /*
+
+import React from 'react'
+import Uncontrolled from './Uncontrolled'
+
+const App = () => {
+    return (
+        <>
+            <Uncontrolled/>
+        </>
+    )
+}
+export default App
 
 // */
