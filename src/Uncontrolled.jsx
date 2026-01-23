@@ -1,7 +1,7 @@
 // ------------------------------------------------------------------
 // **IMP
 // **UNCONTROLLED FORM
-// /*
+/*
 
 import React from 'react'
 
@@ -30,4 +30,4 @@ const Uncontrolled = () => {
 }
 export default Uncontrolled
 
-// */
+*/
