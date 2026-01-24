@@ -380,6 +380,7 @@ export default App
 
 
 
+
 // ---------------------------------------------------------------------------
 // **IMP
 // HOOKS
@@ -450,6 +451,7 @@ export default App
 
 
 
+
 // **IMP
 // CONTEXT API
 /*
@@ -484,6 +486,7 @@ const App = () => {
 }
 export default App
 */
+
 
 
 
@@ -547,10 +550,14 @@ const App = () => {
 export default App
 */
 
+
+
+
+
 // ------------------------------------------------------------------
 // **IMP
 // **UNCONTROLLED FORM
-// /*
+/*
 
 import React from 'react'
 import Uncontrolled from './Uncontrolled'
@@ -559,6 +566,65 @@ const App = () => {
     return (
         <>
             <Uncontrolled/>
+        </>
+    )
+}
+export default App
+*/
+
+// ---------------------------------
+// **IMP
+// **CONTROLLED FORM
+/*
+
+import React from 'react'
+import Controlled from './Controlled'
+
+const App = () => {
+    return (
+        <>
+            <Controlled/>
+        </>
+    )
+}
+export default App
+*/
+
+
+
+
+
+// ------------------------------------------------------------------
+// **IMP
+// **LIFECYCLE -- MOUNTING PHASE
+/*
+
+import React from 'react'
+import LifeCycleParent from './lifecycle/LifeCycleParent'
+
+const App = () => {
+    return (
+        <>
+            <LifeCycleParent/>
+        </>
+    )
+}
+export default App
+
+*/
+
+// ---------------------------------
+// **IMP
+// **LIFECYCLE -- UPDATING PHASE and UNMOUNTING PHASE
+// /*
+
+import React from 'react'
+import LifeCycleParent from './lifecycle/LifeCycleParent'
+
+const App = () => {
+    return (
+        <>
+            <LifeCycleParent/>
         </>
     )
 }
