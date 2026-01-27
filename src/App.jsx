@@ -616,7 +616,7 @@ export default App
 // ---------------------------------
 // **IMP
 // **LIFECYCLE -- UPDATING PHASE and UNMOUNTING PHASE
-// /*
+/*
 
 import React from 'react'
 import LifeCycleParent from './lifecycle/LifeCycleParent'
@@ -628,6 +628,29 @@ const App = () => {
         </>
     )
 }
+export default App
+*/
+
+
+
+
+
+// ------------------------------------------------------------------
+// **IMP
+// **SIDE EFFECT
+// /*
+
+import React from 'react'
+import UseEffectParent from './lifecycle/UseEffectParent'
+
+const App = () => {
+    return (
+        <>
+            <UseEffectParent/>
+        </>
+    )
+}
+
 export default App
 
 // */
