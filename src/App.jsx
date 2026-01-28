@@ -610,7 +610,6 @@ const App = () => {
     )
 }
 export default App
-
 */
 
 // ---------------------------------
@@ -638,7 +637,7 @@ export default App
 // ------------------------------------------------------------------
 // **IMP
 // **SIDE EFFECT
-// /*
+/*
 
 import React from 'react'
 import UseEffectParent from './lifecycle/UseEffectParent'
@@ -650,7 +649,62 @@ const App = () => {
         </>
     )
 }
-
 export default App
+
+*/
+
+
+
+
+
+// ------------------------------------------------------------------
+// **IMP
+// **key-props -> special prop. Used to identify each element uniquely
+// key = value ---> value passed to key must be unique
+// list => collection of item => array
+// rendering => loading/displaying content on UI
+/*
+
+import React, { Fragment } from 'react'
+
+const App = () => {
+    const students = ["punith", "athira", "vipul", "punith", "athira"]
+
+    return (
+        <>
+            {students.map((val, idx) => {
+                return (
+                    <Fragment key={idx}>
+                        <ul>
+                            <li>{val}</li>
+                        </ul>
+                    </Fragment>
+                )
+            })}
+        </>
+    )
+}
+export default App
+
+*/
+
+// ---------------------------------
+// **IMP
+// **key-props
+// /*
+
+import React from 'react'
+import AxiosLibrary from './apicalls/AxiosLibrary'
+
+const App = () => {
+    return (
+        <>
+            <AxiosLibrary/>
+        </>
+    )
+}
+export default App
+
+
 
 // */
