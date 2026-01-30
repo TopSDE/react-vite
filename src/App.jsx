@@ -650,7 +650,6 @@ const App = () => {
     )
 }
 export default App
-
 */
 
 
@@ -685,13 +684,12 @@ const App = () => {
     )
 }
 export default App
-
 */
 
 // ---------------------------------
 // **IMP
 // **key-props
-// /*
+/*
 
 import React from 'react'
 import AxiosLibrary from './apicalls/AxiosLibrary'
@@ -704,7 +702,95 @@ const App = () => {
     )
 }
 export default App
+*/
+
+
+// ------------------------------------------------------------------
+
+// ONE PROGRAM NOT WRITTEN -- ABSENT
+
+// ------------------------------------------------------------------
 
 
 
+
+
+// ------------------------------------------------------------------
+// **IMP
+// **PURE COMPONENT IN CBC
+/*
+import React from 'react'
+import PureParent from './prevent-rerender/PureParent'
+
+const App = () => {
+    return (
+        <>
+          <PureParent/>  
+        </>
+    )
+}
+export default App
+*/
+
+// ---------------------------------
+// **IMP
+// **PURE COMPONENT IN FBC
+/*
+
+import React from 'react'
+import PureParent from './prevent-rerender/PureParent'
+
+const App = () => {
+    return (
+        <>
+            <PureParent/>
+        </>
+    )
+}
+export default App
+*/
+
+
+
+
+
+// ------------------------------------------------------------------
+// **IMP
+// **useMemo() in FBC
+// /*
+
+import React, { useMemo, useState } from 'react'
+
+const App = () => {
+
+    const [count1, setCount1] = useState(0)
+    const [count2, setCount2] = useState(10)
+
+    // heavy func
+    const even = useMemo(() => {
+        let i = 0
+
+        while (i < 10000000000) {
+            i++
+        }
+        
+        return count1 % 2 === 0 // only if condition false "return" executes
+
+    }, [count1])
+
+    return (
+        <>
+            <button onClick={() => {
+                setCount1(count1 + 1)
+            }}>COUNT1 -- {count1}</button>
+
+            {even ? "EVEN" : "ODD"}
+
+            <button onClick={() => {
+                setCount2(count2 + 1)
+            }}>COUNT2 -- {count2}</button>
+        </>
+    )
+}
+export default App
 // */
