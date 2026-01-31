@@ -1,12 +1,12 @@
 // ------------------------------------------------------------------
 // **IMP
 // **PURE COMPONENT IN CBC
-/*
+// /*
 
 // pure CBC => "NO RE-RENDER"
-import React, { Component } from 'react'
+import React, { Component, PureComponent } from 'react'
 
-export default class PureChild extends Component {
+export default class PureChild extends PureComponent {
     render() {
         console.log("Pure Child is rendering");
 
@@ -22,7 +22,7 @@ export default class PureChild extends Component {
 // ---------------------------------
 // **IMP
 // **PURE COMPONENT IN FBC
-// /*
+/*
 
 import React, { memo } from 'react'
 
@@ -39,4 +39,4 @@ const PureChild = (props) => {
 }
 export default memo(PureChild)
 
-// */
+*/

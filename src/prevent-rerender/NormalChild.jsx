@@ -1,7 +1,7 @@
 // ------------------------------------------------------------------
 // **IMP
 // **PURE COMPONENT IN CBC
-/*
+// /*
 
 // normal / ordinary CBC => "RE-RENDER HAPPENS"
 import React, { Component } from 'react'
@@ -17,12 +17,12 @@ export default class NormalChild extends Component {
         )
     }
 }
-*/
+// */
 
 // ---------------------------------
 // **IMP
 // **PURE COMPONENT IN FBC
-// /*
+/*
 
 import React from 'react'
 
@@ -38,4 +38,4 @@ const NormalChild = (props) => {
 }
 export default NormalChild
 
-// */
+*/

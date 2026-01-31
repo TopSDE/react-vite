@@ -1,7 +1,7 @@
 // ------------------------------------------------------------------
 // **IMP
 // **PURE COMPONENT IN CBC
-/*
+// /*
 
 // normal / ordinary CBC => "RE-RENDER HAPPENS"
 import React, { Component } from 'react'
@@ -34,12 +34,12 @@ export default class PureParent extends Component {
         )
     }
 }
-*/
+// */
 
 // ---------------------------------
 // **IMP
 // **PURE COMPONENT IN FBC
-// /*
+/*
 
 import React, { useState } from 'react'
 import NormalChild from './NormalChild';
@@ -66,4 +66,4 @@ const PureParent = () => {
 }
 export default PureParent
 
-// */
+*/

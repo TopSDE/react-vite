@@ -3,12 +3,34 @@
 // **CONTROLLED FORM
 /*
 
-import React from 'react'
+// storing "diff input data" under diff state variable
+// take "diff state" then "func" passed to onChange event must be "diff"
+import React, { useState } from 'react'
 
 const Controlled = () => {
 
+    const [userName, setUserName] = useState("")
+    const [userEmail, setUserEmail] = useState("")
+
+    let handleName = (event) => {
+        console.log(event);
+        setUserName(event.target.value)
+    }
+
+    let handleEmail = (event) => {
+        console.log(event);
+        setUserEmail(event.target.value)
+    }
+
     let handleSubmit = (event) => {
-        event.preventDefault() // STOPS THE AUTO-RELOADING OF FORM      
+        event.preventDefault() 
+        // STOPS THE AUTO-RELOADING OF FORM
+            // BCZ when we click on sumbit, entire form will be vanished/cleared
+            // so to prevent this, we stop reloading.
+
+        console.log(userName);
+        console.log(userEmail);
+          
     }
 
     return (
@@ -19,11 +41,11 @@ const Controlled = () => {
                 </h1>
                 <div>
                     <label htmlFor='uname'>USERNAME : </label>
-                    <input type='text' id="uname"></input>
+                    <input type='text' id="uname" onChange={handleName}></input>
                 </div>
                 <div>
                     <label htmlFor='uemail'>UEMAIL : </label>
-                    <input type='email' id="uemail"></input>
+                    <input type='email' id="uemail" onChange={handleEmail}></input>
                 </div>
                 <div>
                     <button>SUBMIT</button>
@@ -39,6 +61,9 @@ export default Controlled
 // **IMP
 // **CONTROLLED FORM
 // /*
+
+// storing "diff input data" under same state variable
+// take "same state" then "func" passed to onChange event must be "same"
 import React, { useState } from 'react'
 
 const Controlled = () => {
@@ -54,7 +79,10 @@ const Controlled = () => {
 
     let handleChange = (event) => {
         let {name, value} = event.target
-        setFormData({[name]:value})
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }))
     }
     
     let handleSubmit = (event) => {

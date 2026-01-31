@@ -737,6 +737,16 @@ export default App
 // **PURE COMPONENT IN FBC
 /*
 
+// memo() => method => react (alternative for PureComponent in FBC)
+// acts as Higher Order Component (HOC) --> memo(FBC)
+// To skip/prevent unwanted re-rendering in "FBC"
+// NOTE : Memo memoizing (store) entire component
+// which is passed into memo() based on prop-value
+// Memo store changes in browser cache --> caching process
+// Even after changing components by "memo" few components still re-renders??
+// Huge data cannot be stored at "browser cache"
+// It is applicable only non-primitive datatypes
+
 import React from 'react'
 import PureParent from './prevent-rerender/PureParent'
 
@@ -757,7 +767,14 @@ export default App
 // ------------------------------------------------------------------
 // **IMP
 // **useMemo() in FBC
-// /*
+/*
+
+// useMemo() --> hook --> stop unwanted re-rendering in FBC
+// heavy function --> fun which takes lot of time to load
+// NOTE : useMemo() memoizing (store) result/output returned by heavy function
+// syntax : const output = useMemo(heavyFun, dependency-list)
+// Memoization --> caching the result of heavy fun
+
 
 import React, { useMemo, useState } from 'react'
 
@@ -790,6 +807,57 @@ const App = () => {
                 setCount2(count2 + 1)
             }}>COUNT2 -- {count2}</button>
         </>
+    )
+}
+export default App
+*/
+
+/* 
+// useCallback() --> hook --> stop unwanted re-rendering in FBC
+// NOTE : useCallback() memoizing (store) entire function
+// syntax : const cachedFun = useCallback(fun, dependency-list)
+
+import React from 'react'
+import MainCompo from './usecallback/MainCompo'
+
+const App = () => {
+    return (
+        <>
+            <MainCompo/>
+        </>
+    )
+}
+export default App
+*/
+
+
+
+
+
+// ------------------------------------------------------------------
+// **IMP
+// **ROUTERS CONCEPT
+// /*
+
+import React from 'react'
+import Home from './routing/Home'
+import Setting from './routing/Setting'
+import Menu from './routing/Menu'
+import PageNotFound from './routing/PageNotFound'
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+
+const App = () => {
+    return (
+        <>
+            <BrowserRouter>
+                <Routes>
+                   <Route path='/' element={<Home/>}/>
+                   <Route path='/setting' element={<Setting/>}/>
+                   <Route path='/menu' element={<Menu/>}/>
+                   <Route path='*' element={<PageNotFound/>}/>
+                </Routes>
+            </BrowserRouter>
+        </> 
     )
 }
 export default App
