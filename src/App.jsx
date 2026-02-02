@@ -837,7 +837,8 @@ export default App
 // ------------------------------------------------------------------
 // **IMP
 // **ROUTERS CONCEPT
-// /*
+// **Component-based routing
+/*
 
 import React from 'react'
 import Home from './routing/Home'
@@ -845,20 +846,76 @@ import Setting from './routing/Setting'
 import Menu from './routing/Menu'
 import PageNotFound from './routing/PageNotFound'
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import Layout from './routing/Layout'
 
 const App = () => {
     return (
         <>
             <BrowserRouter>
                 <Routes>
-                   <Route path='/' element={<Home/>}/>
-                   <Route path='/setting' element={<Setting/>}/>
-                   <Route path='/menu' element={<Menu/>}/>
-                   <Route path='*' element={<PageNotFound/>}/>
+                   <Route path='/' element={<Layout />}>
+                        <Route index element={<Home />} />
+                        <Route path='/setting' element={<Setting/>}/>
+                        <Route path='/menu' element={<Menu/>}/>
+                        <Route path='*' element={<PageNotFound/>}/>
+                    </Route>
                 </Routes>
             </BrowserRouter>
         </> 
     )
 }
 export default App
+*/
+
+// ---------------------------------
+// **IMP
+// **
+// **Object-based routing
+
+// /*
+
+import React from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from './routing/Home'
+import Setting from './routing/Setting'
+import Menu from './routing/Menu'
+import PageNotFound from './routing/PageNotFound'
+import Layout from './routing/Layout'
+
+const routing = createBrowserRouter([
+    {
+        path:"/",
+        element: <Layout/>,
+        children: [
+            {
+                index:true, // => means the path of immediate child route is same as 
+                // path of parent.
+                // or path: "/",
+                element:<Home/>
+            },
+            {
+                path:"/menu",
+                element:<Menu/>
+            },
+            {
+                path:"/setting",
+                element:<Setting/>
+            },
+            {
+                path:"*",
+                element:<PageNotFound/>
+            }
+        ]
+    }
+])
+
+const App = () => {
+    return (
+        <>
+            <RouterProvider router={routing} />
+        </>
+    )
+}
+export default App
+
 // */

@@ -4,10 +4,9 @@ import Navbar from './Navbar'
 const PageNotFound = () => {
     return (
         <>
-            <Navbar/>
+            {/* <Navbar/> */}
             <h1>Page Not Found</h1>
         </>
     )
 }
-
 export default PageNotFound

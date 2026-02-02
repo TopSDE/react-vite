@@ -4,10 +4,9 @@ import Navbar from './Navbar'
 const Setting = () => {
     return (
         <>  
-            <Navbar/>
+            {/* <Navbar/> */}
             <h1>Setting</h1>
         </>
     )
 }
-
 export default Setting
