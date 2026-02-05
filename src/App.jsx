@@ -707,7 +707,7 @@ export default App
 
 // ------------------------------------------------------------------
 
-// ONE PROGRAM NOT WRITTEN -- ABSENT
+// ONE PROGRAM NOT WRITTEN -- ABSENT => 29/02/26
 
 // ------------------------------------------------------------------
 
@@ -872,7 +872,7 @@ export default App
 // **
 // **Object-based routing
 
-// /*
+/*
 
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -917,5 +917,28 @@ const App = () => {
     )
 }
 export default App
+*/
 
+// ------------------------------------------------------------------
+
+// ONE PROGRAM NOT WRITTEN -- ABSENT => 03/02/26 & 04/02/26
+
+// ------------------------------------------------------------------
+
+// ------------------------------------------------------------------
+// **IMP
+// 05/02/26
+// /*
+
+import React from 'react'
+import ViewAll from './crud/ViewAll'
+
+const App = () => {
+    return (
+        <>
+            <ViewAll />
+        </>
+    )
+}
+export default App
 // */
