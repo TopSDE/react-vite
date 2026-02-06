@@ -735,6 +735,7 @@ export default App
 // ------------------------------------------------------------------
 // **IMP
 // **PORTALS
+/*
 import React from 'react'
 import Popup from './portals/Portals'
 
@@ -746,8 +747,30 @@ const App = () => {
         </>
     )
 }
-
 export default App
+*/
+
+// ---------------------------------
+// **IMP
+// **PORTALS TASK
+// /*
+
+import React, { useState } from 'react'
+import Portals from './portals/Portals'
+
+const App = () => {
+
+    const [toggle, setToggle] = useState(false)
+
+    return (
+        <>
+            <button onClick={() => {setToggle(!toggle)}}>SIGN UP</button>
+            {toggle ? <Portals/> : <></>}
+        </>
+    )
+}
+export default App
+// */
 
 
 
