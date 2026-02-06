@@ -689,6 +689,8 @@ export default App
 // ---------------------------------
 // **IMP
 // **key-props
+// axios => we use axios to extract data from API
+    // it is present in js library
 /*
 
 import React from 'react'
@@ -705,11 +707,47 @@ export default App
 */
 
 
-// ------------------------------------------------------------------
 
-// ONE PROGRAM NOT WRITTEN -- ABSENT => 29/02/26
+
 
 // ------------------------------------------------------------------
+// **IMP
+// **ERROR BOUNDARY
+/*
+
+import React from 'react'
+import Sender from './errorboundary/Sender'
+
+const App = () => {
+    return (
+        <>
+            <Sender/>
+        </>
+    )
+}
+export default App
+*/
+
+
+
+
+
+// ------------------------------------------------------------------
+// **IMP
+// **PORTALS
+import React from 'react'
+import Popup from './portals/Portals'
+
+const App = () => {
+    return (
+        <>
+            <h1>I am App</h1>
+            <Popup/>
+        </>
+    )
+}
+
+export default App
 
 
 
@@ -928,7 +966,7 @@ export default App
 // ------------------------------------------------------------------
 // **IMP
 // 05/02/26
-// /*
+/*
 
 import React from 'react'
 import ViewAll from './crud/ViewAll'
@@ -941,4 +979,4 @@ const App = () => {
     )
 }
 export default App
-// */
+*/
