@@ -10,5 +10,4 @@ const BtnCompo = (props) => {
         </>
     )
 }
-
 export default memo(BtnCompo)

@@ -43,4 +43,8 @@ const Menu = () => {
 }
 export default Menu
 
+// useNavigate() --> hook --> navigate between webpages
+// useNavigate() returns "func" --> "func" either it takes "path" or "delta" as value
+// const func = useNavigate()
+
 // */

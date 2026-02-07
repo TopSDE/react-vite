@@ -753,7 +753,7 @@ export default App
 // ---------------------------------
 // **IMP
 // **PORTALS TASK
-// /*
+/*
 
 import React, { useState } from 'react'
 import Portals from './portals/Portals'
@@ -770,7 +770,7 @@ const App = () => {
     )
 }
 export default App
-// */
+*/
 
 
 
@@ -980,11 +980,39 @@ const App = () => {
 export default App
 */
 
+
+
+
+
+// ------------------------------------------------------------------
+// **IMP
+// **useMemo() in FBC
+// /*
+
+import React from 'react'
+import CounterReducer from './usereducer/CounterReducer'
+
+const App = () => {
+    return (
+        <>
+            <CounterReducer/>
+        </>
+    )
+}
+export default App
+// */
+
+
+
 // ------------------------------------------------------------------
 
 // ONE PROGRAM NOT WRITTEN -- ABSENT => 03/02/26 & 04/02/26
 
 // ------------------------------------------------------------------
+
+
+
+
 
 // ------------------------------------------------------------------
 // **IMP
