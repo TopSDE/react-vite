@@ -930,7 +930,7 @@ export default App
 
 // ---------------------------------
 // **IMP
-// **
+// **ROUTERS CONCEPT
 // **Object-based routing
 
 /*
@@ -986,7 +986,7 @@ export default App
 
 // ------------------------------------------------------------------
 // **IMP
-// **useMemo() in FBC
+// **USE-REDUCER CONCEPT
 // /*
 
 import React from 'react'
